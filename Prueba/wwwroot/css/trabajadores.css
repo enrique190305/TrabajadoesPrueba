@@ -1,0 +1,98 @@
+/* Estilos para la página de trabajadores */
+body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #f8f9fa;
+}
+
+.table-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.custom-header {
+    background-color: #0d6efd;
+    color: white;
+    padding: 15px;
+    border-radius: 8px 8px 0 0;
+}
+
+.footer {
+    margin-top: 30px;
+    padding: 10px 0;
+    color: #6c757d;
+    text-align: center;
+}
+
+.text-muted-light {
+    color: #adb5bd;
+    font-style: italic;
+}
+
+/* Estilos para filas según el sexo */
+.row-male {
+    background-color: rgba(13, 110, 253, 0.1); /* Azul claro */
+}
+
+.row-female {
+    background-color: rgba(255, 123, 0, 0.1); /* Naranja claro */
+}
+
+/* Estilos para filtros */
+.filter-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.filter-badge {
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.filter-badge-active {
+    opacity: 1;
+}
+
+.filter-badge-inactive {
+    opacity: 0.6;
+}
+
+.filter-badge-male {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.filter-badge-female {
+    background-color: #fd7e14;
+    color: white;
+}
+
+.filter-badge-all {
+    background-color: #6c757d;
+    color: white;
+}
+
+/* Estilos para notificaciones toast */
+.toast {
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.toast.bg-success {
+    background-color: rgba(40, 167, 69, 0.9) !important;
+}
+.toast.bg-danger {
+    background-color: rgba(220, 53, 69, 0.9) !important;
+}
+.toast.bg-warning {
+    background-color: rgba(255, 193, 7, 0.9) !important;
+    color: #212529 !important;
+}
+.toast.bg-info {
+    background-color: rgba(23, 162, 184, 0.9) !important;
+}
