@@ -17,7 +17,6 @@ namespace Prueba.Models
         public int? IdDistrito { get; set; }
         public string NombreDistrito { get; set; }
 
-        // Método para obtener la ubicación formateada correctamente
 
     }
 }

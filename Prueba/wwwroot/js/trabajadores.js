@@ -83,9 +83,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const formDataObj = {};
 
         formData.forEach((value, key) => {
-            // Manejar campos de ID para ubicación
             if ((key === 'IdDepartamento' || key === 'IdProvincia' || key === 'IdDistrito') && value === '') {
-                formDataObj[key] = null;  // Enviar null en lugar de string vacío
+                formDataObj[key] = null; 
             } else {
                 formDataObj[key] = value;
             }
@@ -288,22 +287,18 @@ async function cargarDatosTrabajador(id) {
         if (result.success) {
             const trabajador = result.data;
 
-            // Llenar los campos del formulario
             document.getElementById('editId').value = trabajador.id;
             document.getElementById('editTipoDocumento').value = trabajador.tipoDocumento || '';
             document.getElementById('editNumeroDocumento').value = trabajador.numeroDocumento || '';
             document.getElementById('editNombres').value = trabajador.nombres || '';
             document.getElementById('editSexo').value = trabajador.sexo || '';
 
-            // Manejo de ubicación
             document.getElementById('editSelectDepartamento').value = trabajador.idDepartamento || '';
 
-            // Si hay departamento seleccionado, cargar provincias
             if (trabajador.idDepartamento) {
                 await cargarProvincias(trabajador.idDepartamento);
                 document.getElementById('editSelectProvincia').value = trabajador.idProvincia || '';
 
-                // Si hay provincia seleccionada, cargar distritos
                 if (trabajador.idProvincia) {
                     await cargarDistritos(trabajador.idProvincia);
                     document.getElementById('editSelectDistrito').value = trabajador.idDistrito || '';
@@ -321,7 +316,7 @@ async function cargarDatosTrabajador(id) {
     }
 }
 
-// Función auxiliar para cargar provincias (fuera del DOMContentLoaded)
+// Función auxiliar para cargar provincias
 async function cargarProvincias(departamentoId) {
     try {
         const editSelectProvincia = document.getElementById('editSelectProvincia');
@@ -349,7 +344,7 @@ async function cargarProvincias(departamentoId) {
     }
 }
 
-// Función auxiliar para cargar distritos (fuera del DOMContentLoaded)
+// Función auxiliar para cargar distritos 
 async function cargarDistritos(provinciaId) {
     try {
         const editSelectDistrito = document.getElementById('editSelectDistrito');

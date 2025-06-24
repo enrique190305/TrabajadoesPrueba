@@ -41,7 +41,6 @@ namespace Prueba.Pages
                 Trabajadores = await _trabajadorService.ObtenerTrabajadoresAsync();
                 Departamentos = await _trabajadorService.ObtenerDepartamentosAsync();
                 
-                // Aplicar filtro de sexo si está presente
                 if (!string.IsNullOrEmpty(FiltroSexo))
                 {
                     TrabajadoresFiltrados = Trabajadores.Where(t => t.Sexo == FiltroSexo).ToList();

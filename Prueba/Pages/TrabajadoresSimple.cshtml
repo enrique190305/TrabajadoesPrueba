@@ -346,10 +346,8 @@
         </div>
     </div>
 
-    <!-- Se agrega el token antiforgery oculto para AJAX -->
     @Html.AntiForgeryToken()
 
-    <!-- Para pasar mensajes de TempData al JavaScript -->
     @if (TempData["Mensaje"] != null)
     {
         <script>
